@@ -637,7 +637,7 @@ async function _executeAgent(
         testUserIds = testUserIds.split(",").map((id) => id.trim());
         if (testUserIds.includes(userId)) {
             logg.info(`userId is in testUserIds, so limiting ai output`);
-            aiServerBody.limit_output = true;
+            aiServerBody.limit_output = false;
         }
     }
 
